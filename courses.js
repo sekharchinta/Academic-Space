@@ -2,6 +2,9 @@
 const courses = [
     {
         id: 1,
+        icon: "🌐",
+        category: "Web Development",
+        level: "Beginner",
         title: "Web Development Fundamentals",
         description: "Master HTML, CSS, and JavaScript basics for web development",
         modules: [
@@ -77,12 +80,14 @@ const courses = [
                 question: "Which method is used to find the length of a string in JavaScript?",
                 options: ["size()", "len()", "length", "getLength()"],
                 correct: 2
-            }
-        
+            }
         ]
     },
     {
         id: 2,
+        icon: "🐍",
+        category: "Programming",
+        level: "Beginner",
         title: "Python Programming",
         description: "Learn Python from basics to advanced concepts",
         modules: [
@@ -150,13 +155,15 @@ const courses = [
             {
                 question: "What does the 'input()' function do in Python?",
                 options: ["Outputs data to the console", "Takes input from the user", "Terminates the program", "Executes a block of code"],
-                correct: 1
-            }
-        
+                correct: 1
+            }
         ]
     },
     {
         id: 3,
+        icon: "⚛️",
+        category: "Web Development",
+        level: "Intermediate",
         title: "React.js Development",
         description: "Build modern web applications with React.js",
         modules: [
@@ -249,13 +256,15 @@ const courses = [
             {
                 question: "How do you pass data from a parent component to a child component in React?",
                 options: ["Using hooks", "Using props", "Using state", "Using refs"],
-                correct: 1
-            }
-        
+                correct: 1
+            }
         ]
     },
     {
         id: 4,
+        icon: "📊",
+        category: "Data & AI",
+        level: "Intermediate",
         title: "Data Science",
         description: "Introduction to data science and analysis",
         modules: [
@@ -358,13 +367,15 @@ const courses = [
                     "To build predictive models",
                     "To optimize algorithms"
                 ],
-                correct: 1
-            }
-        
+                correct: 1
+            }
         ]
     },
     {
         id: 5,
+        icon: "📱",
+        category: "Mobile",
+        level: "Intermediate",
         title: "Mobile App Development",
         description: "Learn to build mobile apps with React Native",
         modules: [
@@ -405,7 +416,7 @@ const courses = [
                 correct: 0
             },
             {
-                question: "What is the name of Apple’s official IDE for iOS app development?",
+                question: "What is the name of Apple's official IDE for iOS app development?",
                 options: ["Xcode", "Android Studio", "IntelliJ IDEA", "Visual Studio Code"],
                 correct: 0
             },
@@ -452,24 +463,15 @@ const courses = [
                     "To test mobile applications",
                     "To store user data"
                 ],
-                correct: 1
-            },
-            {
-                question: "What is the purpose of an app store in mobile app development?",
-                options: [
-                    "To design user interfaces",
-                    "To distribute and manage mobile applications",
-                    "To test mobile applications",
-                    "To store user data"
-                ],
-                correct: 1
+                correct: 1
             }
-    
-        ]                   
-    }, 
+        ]
+    },
     {
-
         id: 6,
+        icon: "🎨",
+        category: "Design",
+        level: "Beginner",
         title: "UI/UX Design",
         description: "Master the principles of user interface and experience design",
         modules: [
@@ -569,16 +571,18 @@ const courses = [
                 options: [
                     "Testing the app on multiple devices",
                     "Evaluating how easily users can complete tasks on a product",
-                    "Debugging the app’s code",
+                    "Debugging the app's code",
                     "Analyzing marketing performance"
                 ],
-                correct: 1
-            }
-        
+                correct: 1
+            }
         ]
     },
     {
         id: 7,
+        icon: "🗄️",
+        category: "Data & AI",
+        level: "Intermediate",
         title: "Database Management",
         description: "Learn SQL and database management systems",
         modules: [
@@ -671,9 +675,450 @@ const courses = [
             {
                 question: "Which of the following is a NoSQL database?",
                 options: ["PostgreSQL", "Oracle", "MongoDB", "SQLite"],
-                correct: 2
-            }
-        
+                correct: 2
+            }
+        ]
+    },
+    {
+        id: 8,
+        icon: "⚙️",
+        category: "Backend",
+        level: "Intermediate",
+        title: "Node.js Backend Development",
+        description: "Build scalable server-side applications with Node.js and Express",
+        modules: [
+            {
+                title: "Node.js Crash Course",
+                description: "Build server-side applications with Node.js, the JavaScript runtime that powers modern backends.",
+                videoUrl: "https://www.youtube.com/embed/fBNz5xF-Kx4",
+                resources: "https://nodejs.org/en/docs",
+                completed: false
+            },
+            {
+                title: "Building REST APIs with Express",
+                description: "Design and build RESTful APIs using the Express.js framework.",
+                videoUrl: "https://www.youtube.com/embed/L72fhGm1tfE",
+                resources: "https://expressjs.com",
+                completed: false
+            }
+        ],
+        quiz: [
+            {
+                question: "What is Node.js?",
+                options: ["A front-end framework", "A CSS preprocessor", "A JavaScript runtime built on Chrome's V8 engine", "A relational database"],
+                correct: 2
+            },
+            {
+                question: "Which command installs a package in a Node.js project?",
+                options: ["node install", "npm run", "npx build", "npm install"],
+                correct: 3
+            },
+            {
+                question: "Which file lists a project's dependencies?",
+                options: ["config.json", "package.json", "node.json", "app.json"],
+                correct: 1
+            },
+            {
+                question: "Which method creates an HTTP server in Node.js?",
+                options: ["http.createServer()", "server.listen()", "http.start()", "new Server()"],
+                correct: 0
+            },
+            {
+                question: "What is Express.js?",
+                options: ["A database engine", "A code compiler", "A minimal web framework for Node.js", "A testing library"],
+                correct: 2
+            },
+            {
+                question: "Which HTTP method is used to update an existing resource?",
+                options: ["GET", "POST", "DELETE", "PUT"],
+                correct: 3
+            },
+            {
+                question: "What is middleware in Express?",
+                options: ["A function that processes requests between the server and routes", "A database query", "A CSS file", "A build tool"],
+                correct: 0
+            },
+            {
+                question: "Which HTTP status code means 'Not Found'?",
+                options: ["200", "500", "404", "301"],
+                correct: 2
+            },
+            {
+                question: "What does npm stand for?",
+                options: ["Node Process Machine", "Network Packet Manager", "New Program Module", "Node Package Manager"],
+                correct: 3
+            },
+            {
+                question: "Which built-in module is used for file operations?",
+                options: ["http", "os", "fs", "crypto"],
+                correct: 2
+            }
+        ]
+    },
+    {
+        id: 9,
+        icon: "🔐",
+        category: "Security",
+        level: "Intermediate",
+        title: "Cybersecurity & Ethical Hacking",
+        description: "Learn to protect systems and master ethical security techniques",
+        modules: [
+            {
+                title: "Cyber Security Fundamentals",
+                description: "Understand core security concepts, threat landscape, and defensive strategies.",
+                videoUrl: "https://www.youtube.com/embed/U_P23SqJaDc",
+                resources: "https://owasp.org/www-project-top-ten/",
+                completed: false
+            },
+            {
+                title: "Web Application Penetration Testing",
+                description: "Learn to identify and safely exploit common web vulnerabilities.",
+                videoUrl: "https://www.youtube.com/embed/2_lswM1S264",
+                resources: "https://portswigger.net/web-security",
+                completed: false
+            }
+        ],
+        quiz: [
+            {
+                question: "What is the main goal of cybersecurity?",
+                options: ["To build faster websites", "To protect systems, networks, and data from attacks", "To increase internet speed", "To store more data"],
+                correct: 1
+            },
+            {
+                question: "Which attack uses fake emails to trick users into revealing information?",
+                options: ["DDoS", "SQL injection", "Phishing", "Brute force"],
+                correct: 2
+            },
+            {
+                question: "What does a firewall do?",
+                options: ["Encrypts files", "Compiles code", "Stores passwords", "Filters network traffic based on security rules"],
+                correct: 3
+            },
+            {
+                question: "Which vulnerability allows attackers to inject malicious SQL code?",
+                options: ["XSS", "SQL Injection", "CSRF", "Phishing"],
+                correct: 1
+            },
+            {
+                question: "What is a DDoS attack?",
+                options: ["Overwhelming a service with traffic to make it unavailable", "Stealing email passwords", "Reading private messages", "Encrypting files for ransom"],
+                correct: 0
+            },
+            {
+                question: "What is XSS?",
+                options: ["Injecting malicious scripts into a webpage", "Deleting a database", "Scanning ports", "Cracking Wi-Fi"],
+                correct: 0
+            },
+            {
+                question: "What is a strong password practice?",
+                options: ["Reusing one password everywhere", "Using your name and birth year", "Using a unique strong password for each account", "Writing passwords on sticky notes"],
+                correct: 2
+            },
+            {
+                question: "What does Multi-Factor Authentication (MFA) add?",
+                options: ["A second verification layer beyond the password", "Faster internet", "More storage", "Automatic backups"],
+                correct: 0
+            },
+            {
+                question: "What is the principle of least privilege?",
+                options: ["Giving everyone admin rights", "Giving users only the access they need", "Blocking all traffic", "Requiring long passwords"],
+                correct: 1
+            },
+            {
+                question: "What should you do with an unexpected email attachment?",
+                options: ["Open it to check", "Forward it to colleagues", "Reply asking for the password", "Do not open it; verify the sender first"],
+                correct: 3
+            }
+        ]
+    },
+    {
+        id: 10,
+        icon: "☁️",
+        category: "Cloud",
+        level: "Beginner",
+        title: "Cloud Computing with AWS",
+        description: "Learn cloud fundamentals and AWS services from scratch",
+        modules: [
+            {
+                title: "AWS Cloud Practitioner (2020)",
+                description: "Learn cloud concepts, AWS core services, and the shared responsibility model.",
+                videoUrl: "https://www.youtube.com/embed/3hLmDS179YE",
+                resources: "https://aws.amazon.com/training/",
+                completed: false
+            },
+            {
+                title: "AWS Cloud Practitioner (CLF-C01)",
+                description: "A comprehensive course covering billing, security, and core AWS services.",
+                videoUrl: "https://www.youtube.com/embed/SOTamWNgDKc",
+                resources: "https://docs.aws.amazon.com/",
+                completed: false
+            }
+        ],
+        quiz: [
+            {
+                question: "What is cloud computing?",
+                options: ["Installing software on a single PC", "Building physical servers", "Delivering computing services over the internet", "Creating mobile apps"],
+                correct: 2
+            },
+            {
+                question: "Which of these is a cloud deployment model?",
+                options: ["Public", "Private", "Hybrid", "All of the above"],
+                correct: 3
+            },
+            {
+                question: "What does IaaS stand for?",
+                options: ["Internet as a Service", "Infrastructure as a Service", "Integration as a Service", "Information as a Service"],
+                correct: 1
+            },
+            {
+                question: "Which AWS service provides virtual servers?",
+                options: ["S3", "RDS", "EC2", "Lambda"],
+                correct: 2
+            },
+            {
+                question: "Which AWS service is a serverless compute option?",
+                options: ["EC2", "VPC", "Lambda", "CloudFront"],
+                correct: 2
+            },
+            {
+                question: "Which AWS service is used for object storage?",
+                options: ["IAM", "EC2", "Route 53", "S3"],
+                correct: 3
+            },
+            {
+                question: "What does the shared responsibility model mean?",
+                options: ["AWS secures the cloud; customers secure what they put in it", "AWS is fully responsible for everything", "Customers are fully responsible for everything", "Security is not a concern"],
+                correct: 0
+            },
+            {
+                question: "Which service monitors AWS resources?",
+                options: ["S3", "CloudWatch", "RDS", "SQS"],
+                correct: 1
+            },
+            {
+                question: "What is the pay-as-you-go pricing model?",
+                options: ["Pay only for the resources you use", "Pay a flat annual fee", "Pay per user per month", "Pay only for support"],
+                correct: 0
+            },
+            {
+                question: "What does AWS stand for?",
+                options: ["Advanced Web Systems", "Automated Web Solutions", "Amazon Web Services", "Amazon Working Servers"],
+                correct: 2
+            }
+        ]
+    },
+    {
+        id: 11,
+        icon: "☕",
+        category: "Programming",
+        level: "Beginner",
+        title: "Java Programming",
+        description: "Learn Java fundamentals and object-oriented programming",
+        modules: [
+            {
+                title: "Java 8 Full Tutorial",
+                description: "Master Java syntax, core libraries, and object-oriented programming concepts.",
+                videoUrl: "https://www.youtube.com/embed/grEKMHGYyns",
+                resources: "https://docs.oracle.com/en/java/",
+                completed: false
+            },
+            {
+                title: "Java for Absolute Beginners",
+                description: "A hands-on introduction covering variables, loops, arrays, and classes.",
+                videoUrl: "https://www.youtube.com/embed/GoXwIVyNvX0",
+                resources: "https://dev.java/",
+                completed: false
+            }
+        ],
+        quiz: [
+            {
+                question: "Which method is the entry point of a Java program?",
+                options: ["start()", "main()", "run()", "begin()"],
+                correct: 1
+            },
+            {
+                question: "Which keyword is used to define a class in Java?",
+                options: ["struct", "class", "object", "type"],
+                correct: 1
+            },
+            {
+                question: "Which of these is a primitive data type?",
+                options: ["String", "Array", "int", "Object"],
+                correct: 2
+            },
+            {
+                question: "What does JVM stand for?",
+                options: ["Java Version Manager", "Java Variable Memory", "Java Virtual Machine", "Java Visual Machine"],
+                correct: 2
+            },
+            {
+                question: "Which keyword is used to inherit a class?",
+                options: ["implements", "super", "extends", "inherits"],
+                correct: 2
+            },
+            {
+                question: "What is the output of System.out.println(5 % 2)?",
+                options: ["2", "2.5", "0", "1"],
+                correct: 3
+            },
+            {
+                question: "Which keyword makes a variable unchangeable?",
+                options: ["static", "const", "final", "readonly"],
+                correct: 2
+            },
+            {
+                question: "Which is an OOP principle?",
+                options: ["Compilation", "Inheritance", "Debugging", "Serialization"],
+                correct: 1
+            },
+            {
+                question: "Which collection stores key-value pairs?",
+                options: ["ArrayList", "HashMap", "LinkedList", "HashSet"],
+                correct: 1
+            },
+            {
+                question: "What is the size of an int in bytes?",
+                options: ["2", "8", "4", "16"],
+                correct: 2
+            }
+        ]
+    },
+    {
+        id: 12,
+        icon: "🔷",
+        category: "Programming",
+        level: "Intermediate",
+        title: "TypeScript",
+        description: "Add static typing and scale your JavaScript with TypeScript",
+        modules: [
+            {
+                title: "TypeScript for Beginners",
+                description: "Add static typing, interfaces, and modern tooling to your JavaScript projects.",
+                videoUrl: "https://www.youtube.com/embed/BwuLxPH8IDs",
+                resources: "https://www.typescriptlang.org/docs/",
+                completed: false
+            }
+        ],
+        quiz: [
+            {
+                question: "What is TypeScript?",
+                options: ["A database", "A CSS framework", "A superset of JavaScript that adds types", "A browser"],
+                correct: 2
+            },
+            {
+                question: "Which file extension is used for TypeScript files?",
+                options: [".js", ".ts", ".jsx", ".css"],
+                correct: 1
+            },
+            {
+                question: "Which command compiles TypeScript to JavaScript?",
+                options: ["ts", "npm run ts", "compile", "tsc"],
+                correct: 3
+            },
+            {
+                question: "How do you define a type alias?",
+                options: ["typedef", "alias", "type", "define"],
+                correct: 2
+            },
+            {
+                question: "What does the any type do?",
+                options: ["Makes a value required", "Creates an array", "Adds numbers", "Disables type checking for a value"],
+                correct: 3
+            },
+            {
+                question: "What is an interface in TypeScript?",
+                options: ["A database table", "A structure that defines the shape of an object", "A CSS class", "A function"],
+                correct: 1
+            },
+            {
+                question: "Which symbol is used for union types?",
+                options: ["&", "+", "|", "!"],
+                correct: 2
+            },
+            {
+                question: "What does tsc produce?",
+                options: ["Python code", "HTML", "JavaScript", "Machine code"],
+                correct: 2
+            },
+            {
+                question: "Where are TypeScript compiler options configured?",
+                options: ["tsconfig.json", "package.json", "config.ts", "tsettings.json"],
+                correct: 0
+            },
+            {
+                question: "TypeScript is a superset of which language?",
+                options: ["Python", "Java", "C#", "JavaScript"],
+                correct: 3
+            }
+        ]
+    },
+    {
+        id: 13,
+        icon: "🖥️",
+        category: "Programming",
+        level: "Beginner",
+        title: "C++ Programming",
+        description: "Learn C++ from fundamentals to pointers and OOP",
+        modules: [
+            {
+                title: "C++ Tutorial for Beginners",
+                description: "Learn C++ from the ground up, including pointers, memory, and object-oriented programming.",
+                videoUrl: "https://www.youtube.com/embed/vLnPwxZdW4Y",
+                resources: "https://learn.microsoft.com/en-us/cpp/",
+                completed: false
+            }
+        ],
+        quiz: [
+            {
+                question: "Which header is used for input/output in C++?",
+                options: ["<math.h>", "<iostream>", "<stdio.h>", "<stdlib.h>"],
+                correct: 1
+            },
+            {
+                question: "Which operator is used for console output?",
+                options: [">>", "&&", "<<", "||"],
+                correct: 2
+            },
+            {
+                question: "Which keyword creates a new object on the heap?",
+                options: ["alloc", "create", "new", "make"],
+                correct: 2
+            },
+            {
+                question: "What does int main() return by default?",
+                options: ["1", "0", "-1", "undefined"],
+                correct: 1
+            },
+            {
+                question: "Which is a valid C++ comment?",
+                options: ["<!-- comment -->", "# comment", "' comment", "// comment"],
+                correct: 3
+            },
+            {
+                question: "What is a pointer?",
+                options: ["A variable that stores a memory address", "A function", "A class", "A loop"],
+                correct: 0
+            },
+            {
+                question: "What is the size of a bool in C++?",
+                options: ["4 bytes", "8 bytes", "1 byte", "16 bytes"],
+                correct: 2
+            },
+            {
+                question: "Which declares a variable correctly?",
+                options: ["int x = 5;", "int x = 5", "x = 5 int", "int = 5"],
+                correct: 0
+            },
+            {
+                question: "What does & with a variable give?",
+                options: ["Its memory address", "Its value", "Its type", "Its size"],
+                correct: 0
+            },
+            {
+                question: "Which standard library container is a dynamically sized array?",
+                options: ["vector", "array", "string", "map"],
+                correct: 0
+            }
         ]
     }
 ];

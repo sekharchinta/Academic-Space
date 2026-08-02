@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all free courses at Academic Space - programming, web development, data science, cybersecurity, cloud and more.">
+    <meta name="theme-color" content="#6c5ce7">
+    <title>Explore Courses | Academic Space</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="catalog">
+
+    <nav>
+        <div class="logo">
+            <img src="Academic Space.jpg" alt="Academic Space Logo">
+            <span class="logotext">Academic Space</span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html" data-nav="home">Home</a></li>
+            <li><a href="courses.html" data-nav="courses">Courses</a></li>
+            <li><a href="index.html#about" data-nav="about">About</a></li>
+            <li><a href="index.html#contact" data-nav="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <span class="hero-badge">📚 Course Catalog</span>
+            <h1>Explore Courses</h1>
+            <p>Find the skill you want to build. Every course is free, self-paced, and comes with video lessons and a quiz.</p>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="section catalog-section">
+            <form class="search-bar search-bar-light" role="search">
+                <input type="text" id="catalog-search" placeholder="Search courses, topics, or categories..." aria-label="Search courses">
+                <button type="button" id="catalog-search-btn">Search</button>
+            </form>
+
+            <div class="category-filters" id="category-filters" role="tablist" aria-label="Filter courses by category"></div>
+
+            <div class="catalog-info" id="catalog-info"></div>
+            <div class="courses-grid" id="courses-grid"></div>
+
+            <div id="no-results" class="no-results hidden">
+                <p>😕 No courses found matching your search.</p>
+                <button class="btn btn-primary" id="clear-search">Clear Search</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="company-info">
+                <div class="logo footer-logo">
+                    <img src="Academic Space.jpg" alt="Academic Space Logo">
+                    <span class="logotext">Academic Space</span>
+                </div>
+                <p>Empowering minds through quality education. Learn at your own pace with free video courses and quizzes.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Email: sekharchinta160@gmail.com</p>
+                <p>Phone: (+91) 8074082576</p>
+            </div>
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="YouTube">YouTube</a>
+                    <a href="#" aria-label="X (Twitter)">Twitter</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Academic Space. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="courses.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

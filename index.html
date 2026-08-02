@@ -3,78 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Learning Platform</title>
+    <meta name="description" content="Academic Space - A free e-learning platform to master programming, web development, data science, cybersecurity and more with video lessons and interactive quizzes.">
+    <meta name="theme-color" content="#6c5ce7">
+    <title>Academic Space | Learn for the Better Future</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="home">
+
     <nav>
         <div class="logo">
             <img src="Academic Space.jpg" alt="Academic Space Logo">
-            <div class="logotext">Academic Space</div>
+            <span class="logotext">Academic Space</span>
         </div>
-        <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#courses">Courses</a></li>  
-            <li><a href="#about">About</a></li>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html" data-nav="home">Home</a></li>
+            <li><a href="courses.html" data-nav="courses">Courses</a></li>
+            <li><a href="index.html#about" data-nav="about">About</a></li>
+            <li><a href="index.html#contact" data-nav="contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="home">
-        <h1 class="section-title">Learn for the Better Future</h1>
-        <h3 class="section-tag">Develop your skills with our courses</h3>
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="hero-badge">🎓 100% Free Online Learning</span>
+            <h1>Learn for the <span class="highlight">Better Future</span></h1>
+            <p class="hero-subtitle">Transform your life one lesson at a time. Master in-demand skills with free video courses, hands-on practice, and interactive quizzes.</p>
 
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <input type="text" id="course-search" placeholder="Search for a course...">
-            <button onclick="searchCourses()">Search</button>
-        </div>
+            <form class="search-bar" action="courses.html" method="get">
+                <input type="text" name="q" placeholder="Search for a course..." aria-label="Search for a course">
+                <button type="submit">Search</button>
+            </form>
 
-        <div class="courses-grid">
-            <!-- Courses will be dynamically loaded here -->
-        </div>
-    </section>
-
-    <section id="course-content" class="hidden">
-        <button class="back-button">← Back</button>
-        <h2 id="course-title" class="section-title"></h2>
-        <div class="progress-container">
-            <div class="progress-bar">
-                <div class="progress"></div>
+            <div class="hero-actions">
+                <a href="courses.html" class="btn btn-primary">Browse Courses</a>
+                <a href="#steps" class="btn btn-ghost">How It Works</a>
             </div>
-            <span class="progress-text">0% Complete</span>
         </div>
-        <div class="content-list"></div>
-        <button id="take-test" class="hidden">Take Test</button>
-    </section>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,64 C360,120 720,0 1080,40 C1260,60 1380,84 1440,72 L1440,120 L0,120 Z" fill="#0f172a"></path></svg>
+        </div>
+    </header>
 
-    <section id="test-section" class="hidden">
-        <button class="back-button">← Back to Course</button>
-        <h2 class="section-title">Course Test</h2>
-        <div id="quiz-container"></div>
-        <button id="submit-test">Submit Test</button>
-    </section>
+    <main>
+        <!-- ============ MOTIVATION ============ -->
+        <section class="section motivation reveal">
+            <h2 class="section-title">Your Future Is Built on What You Learn Today</h2>
+            <p class="section-subtitle">Education is the most powerful tool you can use to change your life — and it all starts with a single lesson.</p>
 
-    <footer>
+            <div class="motivation-text">
+                <p>In a world that changes every day, the skills you build today become the opportunities of tomorrow. Learning isn't just about passing tests — it's about becoming the person who can solve problems no one else can.</p>
+                <p>Every expert you admire was once a beginner. Every line of code, every design, every breakthrough started with a single step — and the courage to keep going when things got hard.</p>
+                <p>You don't need to be perfect. You need to be consistent. Show up a little every day, and one day you'll look back and be amazed at how far you've come.</p>
+            </div>
+
+            <blockquote class="motivation-quote">
+                <p>“The beautiful thing about learning is that no one can take it away from you.”</p>
+                <cite>— B.B. King</cite>
+            </blockquote>
+        </section>
+
+        <!-- ============ STATS ============ -->
+        <section class="stats-band reveal">
+            <div class="stats-inner">
+                <div class="stat">
+                    <span class="stat-value" id="stat-courses" data-target="13">13</span>
+                    <span class="stat-label">Courses</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="stat-lessons" data-target="25">25</span>
+                    <span class="stat-label">Video Lessons</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="stat-quizzes" data-target="130">130</span>
+                    <span class="stat-label">Quiz Questions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Free Forever</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HOW IT WORKS ============ -->
+        <section id="steps" class="section reveal">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps from curiosity to confidence.</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <span class="step-number">01</span>
+                    <span class="feature-icon">🎯</span>
+                    <h3>Choose Your Course</h3>
+                    <p>Browse our catalog across programming, design, data, cloud, and security. Pick the skill you want to build today.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">02</span>
+                    <span class="feature-icon">🎥</span>
+                    <h3>Watch &amp; Learn</h3>
+                    <p>Follow along with high-quality video lessons at your own pace, and go deeper with carefully curated resources.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">03</span>
+                    <span class="feature-icon">📝</span>
+                    <h3>Test Yourself</h3>
+                    <p>Take an interactive quiz, get instant results, and review every answer so the knowledge truly sticks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ POPULAR COURSES ============ -->
+        <section id="courses" class="section reveal">
+            <h2 class="section-title">Popular Courses</h2>
+            <p class="section-subtitle">Start with these most-loved courses, or explore the full catalog.</p>
+            <div class="courses-grid" id="featured-grid"></div>
+            <div class="center-actions">
+                <a href="courses.html" class="btn btn-primary">View All Courses →</a>
+            </div>
+        </section>
+
+        <!-- ============ WHY US / ABOUT ============ -->
+        <section id="about" class="section reveal">
+            <h2 class="section-title">Why Academic Space?</h2>
+            <p class="section-subtitle">A modern, free learning experience designed for everyone.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎥</span>
+                    <h3>Video Lessons</h3>
+                    <p>Curated YouTube tutorials for every module, from fundamentals to advanced topics.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📝</span>
+                    <h3>Interactive Quizzes</h3>
+                    <p>Test your understanding with quizzes and get instant feedback with full answer reviews.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📈</span>
+                    <h3>Progress Tracking</h3>
+                    <p>Your progress is saved automatically, so you can continue right where you left off.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💯</span>
+                    <h3>100% Free</h3>
+                    <p>No hidden fees, no subscriptions. Quality education, free forever.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="cta-band reveal">
+            <h2>Ready to take the first step?</h2>
+            <p>The best time to start was yesterday. The second best time is right now. Join thousands of learners building better futures — one lesson at a time.</p>
+            <a href="courses.html" class="btn btn-cta">Start Learning Now →</a>
+        </section>
+    </main>
+
+    <footer id="contact">
         <div class="footer-content">
             <div class="company-info">
-                <h3>Academic Space</h3>
-                <p>Empowering minds through quality education</p>
+                <div class="logo footer-logo">
+                    <img src="Academic Space.jpg" alt="Academic Space Logo">
+                    <span class="logotext">Academic Space</span>
+                </div>
+                <p>Empowering minds through quality education. Learn at your own pace with free video courses and quizzes.</p>
             </div>
-            <div class="contact">
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-col">
                 <h3>Contact Us</h3>
                 <p>Email: sekharchinta160@gmail.com</p>
                 <p>Phone: (+91) 8074082576</p>
             </div>
-            <div class="social">
+            <div class="footer-col">
                 <h3>Follow Us</h3>
-                <a href="#">AcademicLearners</a>
-                <a href="#">Academic527</a>
-                <a href="#">Academic Space</a>
+                <div class="social-links">
+                    <a href="#" aria-label="YouTube">YouTube</a>
+                    <a href="#" aria-label="X (Twitter)">Twitter</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Academic Space. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Academic Space. All rights reserved.</p>
         </div>
     </footer>
 
